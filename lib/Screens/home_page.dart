@@ -27,10 +27,9 @@ class _HomePageState extends State<HomePage> {
         .listen((ConnectivityResult result) {
       setState(() {
         print("Status: ${result.name}");
-        if (result.name == 'mobile' || result.name == 'wifi') {
           if (noInternet == true) {
             Navigator.pop(context);
-          }
+          
           noInternet = false;
         } else {
           showDialogBox(context);
