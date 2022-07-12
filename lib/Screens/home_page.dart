@@ -1,30 +1,65 @@
+import 'dart:async';
+
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late StreamSubscription subscription;
+  bool noInternet = true;
+
+  @override
+  void initState() {
+    print(getData());
+    super.initState();
+  }
+
+  getData() async {
+    subscription = Connectivity()
+        .onConnectivityChanged
+        .listen((ConnectivityResult result) {
+      setState(() {
+        print("Status: ${result.name}");
+        if (result.name == 'mobile' || result.name == 'wifi') {
+          if (noInternet == true) {
+            Navigator.pop(context);
+          }
+          noInternet = false;
+        } else {
+          showDialogBox(context);
+
+          noInternet = true;
+        }
+      });
+    });
+
+    // var connectivityResult = await (Connectivity().checkConnectivity());
+    // print('Connection: ${connectivityResult}');
+  }
+
+  @override
+  dispose() {
+    super.dispose();
+    subscription.cancel();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Connecctivity Checker'),
+        title: const Text('Connectivity Checker'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Check'),
-          onPressed: () => checkConnectivity(context),
-        ),
+      body: const Center(
+        child: Text('connectivityText'),
       ),
     );
-  }
-
-  Future<void> checkConnectivity(BuildContext context) async {
-    var connectivityResult = await Connectivity().checkConnectivity();
-    if (connectivityResult == ConnectivityResult.none) {
-      showDialogBox(context);
-    }
   }
 
   showDialogBox(BuildContext context) => showCupertinoDialog<String>(
