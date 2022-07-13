@@ -51,6 +51,10 @@ Visit my channel 👉 : https://www.youtube.com/channel/UCBC_Z7jla1GSITcqLKAtPxQ
 ```
 
 
+## Screenshots
+
+<img src='https://user-images.githubusercontent.com/58719230/178814616-50f268c2-dfb4-42c4-9b75-d50b9cc9751c.png'  width="250" height="500"> <img src='https://user-images.githubusercontent.com/58719230/178814623-734614fe-83d8-4f65-b47b-9b4575916fb0.png'  width="250" height="500">
+
 ## License
 
 ```
