@@ -28,12 +28,12 @@
 
 
 
-## Flutter
+## ✨ Flutter
 [Flutter](https://flutter.dev/) is a crossplatfrom UI tool kit that helps in developing native Android and iOS app from a single code base.
 
 
 
-## App
+## 📱 App
   
 Check out the video tutorial 👉 :
 
@@ -44,18 +44,18 @@ Visit my channel 👉 : https://www.youtube.com/channel/UCBC_Z7jla1GSITcqLKAtPxQ
 
 
 
-## Dependencies
+## 🛠 Dependencies
 ```pubspec.yaml
  internet_connection_checker: ^0.0.1+4
  connectivity_plus: ^2.3.5
 ```
 
 
-## Screenshots
+## 🔭 Screenshots
 
 <img src='https://user-images.githubusercontent.com/58719230/178814616-50f268c2-dfb4-42c4-9b75-d50b9cc9751c.png'  width="250" height="500"> <img src='https://user-images.githubusercontent.com/58719230/178814623-734614fe-83d8-4f65-b47b-9b4575916fb0.png'  width="250" height="500">
 
-## License
+## 📝 License
 
 ```
 MIT License
@@ -81,6 +81,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### Support Us
+## 🙏 Support Us
+
+If you found this project useful and wish to support my work, you can consider buying me a coffee or sponsor this project.
 
 [![Buymeacoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/vijaycreations) [![sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/vijayinyoutube)
