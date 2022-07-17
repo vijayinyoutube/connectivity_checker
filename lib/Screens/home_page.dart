@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                 setState(() => isAlertSet = false);
                 isDeviceConnected =
                     await InternetConnectionChecker().hasConnection;
-                if (!isDeviceConnected) {
+                if (!isDeviceConnected && isAlertSet == false) {
                   showDialogBox();
                   setState(() => isAlertSet = true);
                 }
