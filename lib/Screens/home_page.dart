@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late StreamSubscription subscription;
-  var isDeviceConnected = false;
+  bool isDeviceConnected = false;
   bool isAlertSet = false;
 
   @override
